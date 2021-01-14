@@ -1,9 +1,12 @@
 import React from "react";
 
+type AppTitlePropsType = {
+    title: string
+}
 
-const AppTitle = () => {
+const AppTitle = (props: AppTitlePropsType) => {
     return <div>
-        This is App component
+        {props.title}
     </div>
 }
 

@@ -7,10 +7,10 @@ import Rating from "./components/component/Rating";
 function App() {
     return (
         <div className='App'>
-            <AppTitle/>
-            <Rating value={1}/>
-            <Accordion/>
-            <Rating value={5}/>
+            <AppTitle title={'App component'}/>
+            <Rating value={4}/>
+            <Accordion slogan={'Menu'} collapsed={true}/>
+            <Accordion slogan={'Menu'} collapsed={false}/>
         </div>
     );
 }
