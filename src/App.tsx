@@ -1,16 +1,15 @@
 import React from 'react';
 import './App.css';
-import Accordion from "./components/component/Accordion";
+import Accordion from "./components/component/Accordion/Accordion";
 import AppTitle from "./components/component/AppTitle";
-import Rating from "./components/component/Rating";
+import Rating from "./components/component/Rating/Rating";
+import OnOff from "./components/component/OnOff/OnOff";
+
 
 function App() {
     return (
         <div className='App'>
-            <AppTitle title={'App component'}/>
-            <Rating value={3}/>
-            <Accordion slogan={'Menu'} collapsed={true}/>
-            <Accordion slogan={'Menu'} collapsed={false}/>
+            <OnOff/>
         </div>
     );
 }
