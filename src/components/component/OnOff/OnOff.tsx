@@ -5,9 +5,7 @@ type PropsType = {
 }
 
 function OnOff(props: PropsType) {
-    let on = false
-
-    useState
+    let [on, setOn] = useState(false)
 
     const onStyle = {
         width: '30px',
@@ -16,6 +14,7 @@ function OnOff(props: PropsType) {
         display: 'inline-block',
         padding: '2px',
         backgroundColor: on ? 'green' : 'white',
+        cursor: 'pointer',
     }
     const offStyle = {
         width: '30px',
@@ -25,25 +24,27 @@ function OnOff(props: PropsType) {
         marginLeft: '10px',
         padding: '2px',
         backgroundColor: on ? 'white' : 'red',
+        cursor: 'pointer',
     }
     const indicatorStyle = {
-        width: '10px',
-        height: '10px',
-        borderRadius: '5px',
+        width: '15px',
+        height: '15px',
+        borderRadius: '10px',
         border: '1px solid black',
         display: 'inline-block',
         marginLeft: '5px',
         backgroundColor: on ? 'green' : 'red',
+        cursor: 'pointer',
     }
 
     return <div>
         <div style={onStyle} onClick={() => {
-            on = true
+           setOn(true)
             console.log(on)
         }}>On
         </div>
         <div style={offStyle} onClick={() => {
-            on = false
+            setOn(false)
             console.log(on)
         }}>Off
         </div>
