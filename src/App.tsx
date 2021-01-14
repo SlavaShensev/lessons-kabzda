@@ -1,12 +1,9 @@
 import React from 'react';
 import './App.css';
-import Accordion from "./components/component/Accordion/Accordion";
-import AppTitle from "./components/component/AppTitle";
-import Rating from "./components/component/Rating/Rating";
 import OnOff from "./components/component/OnOff/OnOff";
 import UncontrolledAccordion
     from "./components/component/UncontrolledAccordion/UncontrolledAccordion";
-
+import UncontrolledRating from "./components/component/UncontrolledRating/UncontrolledRating";
 
 function App() {
     return (
@@ -16,6 +13,9 @@ function App() {
             <OnOff/>
             <OnOff/>
             <OnOff/>
+            <UncontrolledRating/>
+            <UncontrolledRating/>
+            <UncontrolledRating/>
             <UncontrolledAccordion slogan={'Menu'}/>
             <UncontrolledAccordion slogan={'Menu'}/>
         </div>
