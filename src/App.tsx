@@ -8,7 +8,7 @@ function App() {
     return (
         <div className='App'>
             <AppTitle title={'App component'}/>
-            <Rating value={4}/>
+            <Rating value={3}/>
             <Accordion slogan={'Menu'} collapsed={true}/>
             <Accordion slogan={'Menu'} collapsed={false}/>
         </div>

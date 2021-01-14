@@ -6,20 +6,12 @@ type AccordionPropsType = {
 }
 
 function Accordion(props: AccordionPropsType) {
-    if (props.collapsed === true) {
-        return (
-            <div className='Accordion'>
-                <AccordionTitle slogan={props.slogan}/>
-                <AccordionBody/>
-            </div>
-        )
-    } else {
-        return (
-            <div className='Accordion'>
-                <AccordionTitle slogan={props.slogan}/>
-            </div>
-        )
-    }
+    return (
+        <div className='Accordion'>
+            <AccordionTitle slogan={props.slogan}/>
+            { !props.collapsed && <AccordionBody/>}
+        </div>
+    )
 }
 
 type AccordionTitle = {
