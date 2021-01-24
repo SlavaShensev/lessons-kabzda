@@ -1,5 +1,15 @@
 import React, {useState} from "react";
 
+type StartPropsType = {
+    selected: boolean
+}
+
+function Star(props: StartPropsType) {
+    return <span>
+        {props.selected ? <b>Start </b> : 'Start '}
+    </span>
+}
+
 function UncontrolledRating() {
     let [on, setOn] = useState(0)
     return (
@@ -31,18 +41,6 @@ function UncontrolledRating() {
             </button>
         </div>
     )
-}
-
-type StartPropsType = {
-    selected: boolean
-}
-
-function Star(props: StartPropsType) {
-    if (props.selected === true) {
-        return <span><b>Start </b></span>
-    } else {
-        return <span>Start </span>
-    }
 }
 
 export default UncontrolledRating;

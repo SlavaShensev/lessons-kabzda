@@ -4,6 +4,7 @@ import OnOff from "./components/component/OnOff/OnOff";
 import UncontrolledAccordion
     from "./components/component/UncontrolledAccordion/UncontrolledAccordion";
 import UncontrolledRating from "./components/component/UncontrolledRating/UncontrolledRating";
+import Accordion from "./components/component/Accordion/Accordion";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <OnOff/>
             <OnOff/>
             <OnOff/>
+            <Accordion slogan={'Hello'} collapsed={false}/>
             <UncontrolledRating/>
             <UncontrolledRating/>
             <UncontrolledRating/>
