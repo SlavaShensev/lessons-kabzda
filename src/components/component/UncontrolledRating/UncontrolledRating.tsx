@@ -3,14 +3,11 @@ import '../../../App.css';
 
 type StartPropsType = {
     selected: boolean
-    value: 1 | 2 | 3 | 4 | 5
-    setOn: (value: 1 | 2 | 3 | 4 | 5) => void
+    setOn: () => void
 }
 
 function Star(props: StartPropsType) {
-    return <span onClick={() => {
-        props.setOn(props.value)
-    }}>
+    return <span onClick={props.setOn}>
         {props.selected ? <b className={'star'}> Start </b> : ' Start '}
     </span>
 }
@@ -20,18 +17,25 @@ function UncontrolledRating() {
     return (
         <div>
             <Star selected={on > 0}
-                  setOn={setOn}
-                  value={1}/>
+                  setOn={() => {
+                      setOn(1)
+                  }}/>
             <Star selected={on > 1}
-                  setOn={setOn} value={2}/>
+                  setOn={() => {
+                      setOn(1)
+                  }}/>
             <Star selected={on > 2}
-                  setOn={setOn}
-                  value={3}/>
+                  setOn={() => {
+                      setOn(3)
+                  }}/>
             <Star selected={on > 3}
-                  setOn={setOn} value={4}/>
+                  setOn={() => {
+                      setOn(4)
+                  }}/>
             <Star selected={on > 4}
-                  setOn={setOn}
-                  value={5}/>
+                  setOn={() => {
+                      setOn(5)
+                  }}/>
         </div>
     )
 }
