@@ -7,19 +7,22 @@ import UncontrolledRating from "./components/component/UncontrolledRating/Uncont
 import Accordion from "./components/component/Accordion/Accordion";
 
 function App() {
+
     return (
         <div className='App'>
-            <OnOff/>
-            <OnOff/>
-            <OnOff/>
-            <OnOff/>
-            <OnOff/>
-            <Accordion slogan={'Hello'} collapsed={false}/>
+            {/*<OnOff/>*/}
+            {/*<OnOff/>*/}
+            {/*<OnOff/>*/}
+            {/*<OnOff/>*/}
+            {/*<OnOff/>*/}
+            {/*<Accordion slogan={'Hello'} collapsed={false}/>*/}
+
             <UncontrolledRating/>
-            <UncontrolledRating/>
-            <UncontrolledRating/>
-            <UncontrolledAccordion slogan={'Menu'}/>
-            <UncontrolledAccordion slogan={'Menu'}/>
+
+            {/*<UncontrolledRating/>*/}
+            {/*<UncontrolledRating/>*/}
+            {/*<UncontrolledAccordion slogan={'Menu'}/>*/}
+            {/*<UncontrolledAccordion slogan={'Menu'}/>*/}
         </div>
     );
 }

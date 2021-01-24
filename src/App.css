@@ -2,6 +2,13 @@ body {
     background: #39c9de;
     width: 600px;
     margin: 20px auto;
+    font-size: 31px;
 }
 
+.star {
+    font-size: 31px;
+    color: #d237cd;
+    text-shadow: 1px 1px 2px black, 0 0 1em #000000;
+    cursor: pointer;
+}
 
