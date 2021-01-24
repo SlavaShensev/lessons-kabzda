@@ -21,7 +21,7 @@ function App() {
 
             {/*<UncontrolledRating/>*/}
             {/*<UncontrolledRating/>*/}
-            {/*<UncontrolledAccordion slogan={'Menu'}/>*/}
+            <UncontrolledAccordion slogan={'Menu'}/>
             {/*<UncontrolledAccordion slogan={'Menu'}/>*/}
         </div>
     );

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 type AccordionPropsType = {
-    slogan?: string
+    slogan: string
     collapsed?: boolean
 }
 
@@ -9,11 +9,11 @@ function UncontrolledAccordion(props: AccordionPropsType) {
     let [on, setOn] = useState(false)
     return (
         <div className='Accordion'>
-            <AccordionTitle slogan={props.slogan}/>
-            <button onClick={() => {
-                setOn(!on)
-            }}>TOGGLE
-            </button>
+            <AccordionTitle slogan={props.slogan}
+                            onClick={() => {
+                                setOn(!on)
+                            }}
+            />
             {!on && <AccordionBody/>}
         </div>
     )
@@ -21,17 +21,16 @@ function UncontrolledAccordion(props: AccordionPropsType) {
 
 type AccordionTitle = {
     slogan?: string
+    onClick: () => void
 }
 const AccordionTitle = (props: AccordionTitle) => {
-    return (
-        <div>
-            {props.slogan}
-        </div>
-    )
+    return <h3 onClick={() => {
+        props.onClick()
+    }}>
+        {props.slogan}
+    </h3>
 }
-type AccordionBody = {
-    slogan: string
-}
+
 const AccordionBody = () => {
     return (
         <div>
@@ -42,9 +41,6 @@ const AccordionBody = () => {
                 <li>4</li>
                 <li>5</li>
                 <li>6</li>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
             </ul>
         </div>
     )
