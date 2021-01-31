@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import {OnOff} from "./OnOff";
 
 
@@ -7,4 +7,4 @@ export default {
     component: OnOff
 }
 
-export const OnOffChanging = () => <OnOffChanging />
+export const OnOnOff = () => <OnOff value={false}/>
