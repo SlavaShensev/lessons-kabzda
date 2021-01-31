@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import './App.css';
-import OnOff from "./components/component/OnOff/OnOff";
+import OnOff from "./components/OnOff/OnOff";
 import UncontrolledAccordion
-    from "./components/component/UncontrolledAccordion/UncontrolledAccordion";
-import UncontrolledRating from "./components/component/UncontrolledRating/UncontrolledRating";
-import Accordion from "./components/component/Accordion/Accordion";
-import Rating, {RatingValueType} from "./components/component/Rating/Rating";
+    from "./components/UncontrolledAccordion/UncontrolledAccordion";
+import UncontrolledRating from "./components/UncontrolledRating/UncontrolledRating";
+import Accordion from "./components/Accordion/Accordion";
+import Rating, {RatingValueType} from "./components/Rating/Rating";
+
 
 function App(props: any) {
 
@@ -18,7 +19,7 @@ function App(props: any) {
             {/*<OnOff/>*/}
             {/*<OnOff/>*/}
             {/*<OnOff/>*/}
-            <Accordion slogan={'Hello'} collapsed={false}/>
+            {/*<Accordion slogan={'Hello'} collapsed={false}/>*/}
             {/*<UncontrolledRating/>*/}
             {/*<Rating value={ratingValue}*/}
             {/*        onClick={setRatingValue}*/}
@@ -27,6 +28,7 @@ function App(props: any) {
             {/*<UncontrolledRating/>*/}
             {/*<UncontrolledAccordion slogan={'Menu'}/>*/}
             {/*<UncontrolledAccordion slogan={'Menu'}/>*/}
+
         </div>
     );
 }

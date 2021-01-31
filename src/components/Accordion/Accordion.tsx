@@ -5,7 +5,7 @@ type AccordionPropsType = {
     collapsed: boolean
 }
 
-function Accordion(props: AccordionPropsType) {
+export function Accordion(props: AccordionPropsType) {
     return (
         <div className='Accordion'>
             <AccordionTitle slogan={props.slogan}/>
@@ -47,5 +47,3 @@ const AccordionBody = () => {
         </div>
     )
 }
-
-export default Accordion;

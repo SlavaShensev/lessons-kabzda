@@ -1,6 +1,6 @@
 import React from "react";
 
-export type RatingValueType = 1 | 2 | 3 | 4 | 5
+export type RatingValueType = 0 | 1 | 2 | 3 | 4 | 5
 
 type RatingPropsType = {
     value: RatingValueType
@@ -41,10 +41,13 @@ type StartPropsType = {
 }
 
 function Star(props: StartPropsType) {
+    const starStyle = {
+        cursor: 'pointer'
+    }
     return <span onClick={() => {
         props.onClick(props.value)
     }}>
-        {props.selected ? <b className={'star'}> Start </b> : ' Start '}
+        {props.selected ? <b> Start </b> : ' Start '}
     </span>
 }
 
