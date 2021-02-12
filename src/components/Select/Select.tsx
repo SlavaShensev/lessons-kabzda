@@ -17,6 +17,8 @@ export function Select(props: SelectPropsType) {
 
     const selectedItem = props.items.find(i => i.id === props.value)
 
+    const toggleItem = () => setActive(!active)
+
     return (
         <>
             <select>
@@ -27,7 +29,7 @@ export function Select(props: SelectPropsType) {
                 <option value="">Moscow</option>
             </select>
             <div className={styles.select}>
-                <h3>{selectedItem && selectedItem.title}</h3>
+                <h3 onClick={toggleItem}>{selectedItem && selectedItem.title}</h3>
                 {
                     active &&
                     <div className={styles.items}>
