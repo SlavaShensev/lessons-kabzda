@@ -7,4 +7,6 @@ export default {
     component: OnOff
 }
 
-export const OnOnOff = () => <OnOff value={false}/>
+export const OnOnOff = () => <OnOff value={true}/>
+
+export const OffOnOff = () => <OnOff value={false}/>
