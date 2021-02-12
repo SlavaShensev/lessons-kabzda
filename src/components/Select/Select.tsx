@@ -1,49 +1,40 @@
-import React from 'react';
+import React, {useState} from 'react';
+import styles from './Select.module.css'
 
-type ItemType = {
+type ItemsType = {
     title: string
     id: any
 }
 
-type SelectTypeProps = {
-    collapsed: boolean
-    items: ItemType[]
-    city: string
+type SelectPropsType = {
+    value?: any
+    onChange: (value: any) => void
+    items: ItemsType[]
 }
 
-export function Select(props: SelectTypeProps) {
+export function Select(props: SelectPropsType) {
+    const [active, setActive] = useState(true)
+
+    const selectedItem = props.items.find(i => i.id === props.value)
+
     return (
-        <div>
-            <SelectTitle city={'City'}/>
-            {!props.collapsed && <SelectBody items={props.items}/>}
-        </div>
-    )
-}
-
-type SelectTitleTypeProps = {
-    city: string
-}
-
-const SelectTitle = (props: SelectTitleTypeProps) => {
-    return (
-        <h2>
-            {props.city}
-        </h2>
-    )
-}
-
-type SelectBodyTypeProps = {
-    items: ItemType[]
-}
-
-const SelectBody = (props: SelectBodyTypeProps) => {
-    return (
-        <ul>
-            {props.items.map( (el)=> {
-                return <li>
-                    {el.title}
-                </li>
-            } )}
-        </ul>
+        <>
+            <select>
+                <option value="">Rogan</option>
+                <option value="">Odessa</option>
+                <option value="">Kiev</option>
+                <option value="">Lvov</option>
+                <option value="">Moscow</option>
+            </select>
+            <div className={styles.select}>
+                <h3>{selectedItem && selectedItem.title}</h3>
+                {
+                    active &&
+                    <div className={styles.items}>
+                        {props.items.map(i => <div key={i.id}>{i.title}</div>)}
+                    </div>
+                }
+            </div>
+        </>
     )
 }
