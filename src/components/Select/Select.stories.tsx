@@ -1,6 +1,5 @@
 import {Select} from "./Select";
-import React from "react";
-import {action} from "@storybook/addon-actions";
+import React, {useState} from "react";
 
 export default {
     title: 'Select stories',
@@ -15,19 +14,24 @@ const citys = [
     {title: 'Moscow', id: 5},
 ]
 
-export const WithValue = () =>
-    <>
-        <Select onChange={action('Value ')}
+export const WithValue = () => {
+    const [value, setValue] = useState('2')
+    return <>
+        <Select onChange={setValue}
                 items={citys}
-                value={2}
+                value={value}
         />
     </>
+}
 
-export const WithoutValue = () =>
-    <>
-        <Select onChange={action('Value ')}
+export const WithoutValue = () => {
+    const [value, setValue] = useState(null)
+    return <>
+        <Select onChange={setValue}
+                value={value}
                 items={citys}
         />
 
     </>
 
+}
