@@ -18,3 +18,8 @@ body {
     border: 1px solid white;
     cursor: pointer;
 }
+
+.item.select {
+    background: white;
+    color: black;
+}
